@@ -146,29 +146,24 @@ ul {
 }
 
 .header-contacts-link {
-  display: inline-block;
+  display: flex;
   align-items: center;
   color: var(--primary-text-color);
   text-decoration: none;
   outline: 1px solid tomato;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
 }
-
-  /* display: block;
-  content: "";
-  height: 120px;
-  border-radius: 4px;
-  outline: 1px, solid tomato;
-  background-color: var(--primary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center; */
-
+/* 
 .header-contacts-link::before{
  content: "";
  display: inline-block;
+ margin-right: 10px;
  width: 16px;
  height: 16px;
  align-items: center;
@@ -176,6 +171,14 @@ ul {
  background-repeat: no-repeat;
  background-position: center;
  background-image: url(../images/header/envelope.svg);
+} */
+
+.header-link-icon {
+ margin-right: 10px;
+ width: 20px;
+ height: 20px;
+ 
+ outline: 1px solid tomato;
 }
 
 
