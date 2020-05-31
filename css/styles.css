@@ -149,8 +149,8 @@ ul {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
+ fill: var(--primary-text-color);
   text-decoration: none;
-  outline: 1px solid tomato;
 
   padding-top: 15px;
   padding-bottom: 15px;
@@ -158,28 +158,18 @@ ul {
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
-/* 
-.header-contacts-link::before{
- content: "";
- display: inline-block;
- margin-right: 10px;
- width: 16px;
- height: 16px;
- align-items: center;
- outline: 1px solid tomato;
- background-repeat: no-repeat;
- background-position: center;
- background-image: url(../images/header/envelope.svg);
-} */
 
 .header-link-icon {
  margin-right: 10px;
- width: 20px;
- height: 20px;
- 
- outline: 1px solid tomato;
+ width: 15px;
+ height: 15px;
 }
+/* .header-link-icon:hover {
+ 
+ fill: red;
+} */
 
 
 /* hero */
@@ -277,21 +267,23 @@ ul {
   width: 270px;
   height: 251px;
 }
-.benefits-list::before{
-  display: block;
-  content: "";
-  height: 120px;
-  border-radius: 4px;
-  outline: 1px, solid tomato;
-  background-color: var(--primary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
 
+.box-benefits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 270px;
+  height: 120px;
+  background-color: var(--icon-bg-color);
+
+  border-radius: 4px;
   margin-bottom: 30px;
-}
-.icon-antenna::before {
-  background-image: url(../images/benefits/antenna.svg);
 } 
+.benefits-icon {
+  width: 70px;
+  height: 70px;
+}
 .icon-clock::before {
   background-image: url(../images/benefits/clock.svg);
 }
@@ -363,7 +355,10 @@ p {
 .team-list {
   background: var(--white-color);
 
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  width: 270px;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-title {
   margin-top: 0;
@@ -379,12 +374,42 @@ p {
   display: flex;
   justify-content: center;
 
+  margin-left: 10px;
   margin-bottom: 24px;
+  width: 270px;
 }
 .img-team {
   margin-bottom: 30px;
 }
+
+/* social_links */
+
+.box_social_links {
+  width: 206px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_social_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  fill: var(--social-network-color);
+}
+.list_social_links:hover {
+  background-color: var(--accent-color);
+  fill: var(--white-color);
+}
+
 .social_links {
+  width: 20px;
+  height: 20px;
 }
 
 /* clientes */
@@ -392,6 +417,12 @@ p {
 .clientes {
   display: flex;
   justify-content: space-between;
+}
+
+.clientes-logo {
+  width: 90px;
+  height: 55px;
+
 }
 
 /* portfolio */
@@ -419,9 +450,12 @@ p {
   margin-bottom: 30px;
 
   width: 370px
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
   overflow: hidden;
+}
+.portfolio-card > li:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-card > li:nth-child(3n) {
@@ -482,7 +516,11 @@ footer {
   display: block;
   margin-bottom: 21px;
 }
-.footer-social-links {
+.footer-bg-links {
+  fill: var(--white-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-social-links1 {
   width: 206px;
 
   display: flex;
@@ -595,14 +633,24 @@ footer {
 }
 
 .clientes-button {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 170px;
   height: 90px;
+  fill: var(--social-network-color);
+
+  border-radius: 4px;
+
 
   background-color: var(--white-color);
   border: 1px solid var(--social-network-color);
 }
 .clientes-button:hover {
   border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .footer-button {
@@ -611,21 +659,11 @@ footer {
   justify-content: space-evenly;
   margin-bottom: 0;
 }
-.footer-button::after {
-  content: "";
+
+.footer-button-icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  background-image: url(../images/footer/icon_send.svg);
-  background-size: contain;
-}
-.footer-button:hover::after{
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-image: url(../images/footer/icon_send_hover.svg);
-  background-size: contain;
 }
 
 .list-button {
